@@ -1,2 +1,40 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/*Declaring CSS variables here*/
+
+:root {
+  --font_size-h1: 3rem;
+  --font_size-h2: 2.25rem;
+  --font_size-h3: 1.25rem;
+  --font_size-body: 1rem;
+
+  --first-font: "Source Sans Pro", sans-serif;
+  --second-font: "Source Sans Pro", monospace;
+  --font-wt1: 300;
+  --font-wt2: 900;
+
+  --light_color: #eeeeee;
+  --dark_color: #393e46;
+  --main_color: #00adb5;
+}
+
+/* Using media query here*/
+
+/* styles for browsers larger than 800px */
+@media (min-width: 800px) {
+  :root {
+    --font_size-h1: 4.5rem;
+    --font_size-h2: 3.75rem;
+    --font_size-h3: 1.5rem;
+    --font_size-body: 1.125rem;
+  }
+}
+
+/* Styling starts here :) */
 body {
+  background-color: var(--light_color);
 }
