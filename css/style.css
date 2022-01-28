@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro@1&display=swap");
+
 *,
 *::after,
 *::before {
@@ -13,12 +16,13 @@
   --font_size-body: 1rem;
 
   --first-font: "Source Sans Pro", sans-serif;
-  --second-font: "Source Sans Pro", monospace;
+  --second-font: "Source Code Pro", monospace;
   --font-wt1: 300;
   --font-wt2: 900;
 
   --light_color: #eeeeee;
   --dark_color: #393e46;
+  --darker_color: #222831;
   --main_color: #00adb5;
 }
 
@@ -37,4 +41,31 @@
 /* Styling starts here :) */
 body {
   background-color: var(--light_color);
+  color: var(--dark_color);
+  margin: 0;
+  font-size: var(--font_size-body);
+  font-family: var(--first-font);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: var(--font_size-h1);
+}
+h2 {
+  font-size: var(--font_size-h2);
+}
+h3 {
+  font-size: var(--font_size-h3);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
 }
