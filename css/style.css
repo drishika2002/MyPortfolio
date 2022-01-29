@@ -23,7 +23,7 @@
   --light_color: #eeeeee;
   --dark_color: #393e46;
   --darker_color: #222831;
-  --main_color: #00adb5;
+  --main_color: #0a81ab;
 }
 
 /* Using media query here*/
@@ -31,10 +31,10 @@
 /* styles for browsers larger than 800px */
 @media (min-width: 800px) {
   :root {
-    --font_size-h1: 4.5rem;
-    --font_size-h2: 3.75rem;
-    --font_size-h3: 1.5rem;
-    --font_size-body: 1.125rem;
+    --font_size-h1: 4.25rem;
+    --font_size-h2: 3.25rem;
+    --font_size-h3: 1.25rem;
+    --font_size-body: 1.1rem;
   }
 }
 
@@ -46,6 +46,10 @@ body {
   font-size: var(--font_size-body);
   font-family: var(--first-font);
   line-height: 1.6;
+}
+
+strong {
+  font-weight: var(--font-wt2);
 }
 
 img {
@@ -66,6 +70,27 @@ h3 {
 h1,
 h2,
 h3 {
-  line-height: 1;
+  line-height: 1.2;
   margin: 0;
+}
+
+section-title {
+  margin-bottom: 0.25em;
+}
+
+.section_title-intro strong {
+  display: block;
+}
+
+.section_title-intro {
+  font-weight: var(--font-wt1);
+}
+.section_subtitle {
+  margin: 0;
+  font-size: var(--font_size-h3);
+}
+
+.section_subtitle-intro,
+.section_subtitle-about {
+  background: var(--main_color);
 }
