@@ -23,7 +23,7 @@
   --light_color: #eeeeee;
   --dark_color: #393e46;
   --darker_color: #222831;
-  --main_color: #48d1cc;
+  --main_color: #3ec1d3;
 }
 
 /* Using media query here*/
@@ -134,7 +134,7 @@ nav {
     grid-area: img;
     min-width: 250px;
     border-radius: 50%;
-    border: 0.25rem double #48d1cc;
+    border: 0.25rem double var(--main_color);
     box-shadow: 6px 6px 5px rgb(170, 169, 165);
     position: relative;
     z-index: 2;
@@ -148,5 +148,46 @@ nav {
     position: relative;
     right: -1.5rem;
     width: calc(100% - 1.5rem);
+  }
+}
+
+/* My services section */
+
+.my-services {
+  /* background-color: var(--dark_color); */
+  background-image: url("../images/s.jpg");
+  color: var(--light_color);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.section_title-services {
+  color: var(--main_color);
+  position: relative;
+}
+
+.section_title-services::after {
+  content: "";
+  display: block;
+  width: 12.5%;
+  height: 1.5px;
+  margin: 1.5rem auto 3.5rem;
+  background: var(--light_color);
+  opacity: 0.35;
+}
+
+.service {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+@media (min-width: 960px) {
+  .services {
+    display: flex;
+  }
+
+  .service {
+    margin: 0 auto;
   }
 }
