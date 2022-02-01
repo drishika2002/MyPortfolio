@@ -23,15 +23,15 @@
   --light_color: #eeeeee;
   --dark_color: #393e46;
   --darker_color: #222831;
-  --main_color: #0a81ab;
+  --main_color: #48d1cc;
 }
 
 /* Using media query here*/
 
 /* styles for browsers larger than 800px */
-@media (min-width: 800px) {
+@media (min-width: 960px) {
   :root {
-    --font_size-h1: 4.25rem;
+    --font_size-h1: 4rem;
     --font_size-h2: 3.25rem;
     --font_size-h3: 1.25rem;
     --font_size-body: 1.1rem;
@@ -48,6 +48,10 @@ body {
   line-height: 1.6;
 }
 
+section {
+  padding: 5rem 2rem;
+}
+
 strong {
   font-weight: var(--font-wt2);
 }
@@ -55,6 +59,11 @@ strong {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+.intro_img:hover {
+  box-shadow: 10px 10px 5px var(--dark_color);
 }
 
 h1 {
@@ -70,13 +79,13 @@ h3 {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1;
   margin: 0;
 }
 
-section-title {
-  margin-bottom: 0.25em;
-}
+/* section-title {
+  margin-bottom: 5rem;
+} */
 
 .section_title-intro strong {
   display: block;
@@ -86,11 +95,58 @@ section-title {
   font-weight: var(--font-wt1);
 }
 .section_subtitle {
-  margin: 0;
+  margin-top: 0.8rem;
   font-size: var(--font_size-h3);
 }
 
 .section_subtitle-intro,
 .section_subtitle-about {
   background: var(--main_color);
+  margin-bottom: 2.5em;
+  padding: 0.5rem 0.95rem;
+}
+
+/* Header Section */
+
+nav {
+  display: none;
+}
+
+/* Introduction section */
+.intro {
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+
+    grid-template-columns: min-content max-content;
+  }
+
+  .intro_img {
+    grid-area: img;
+    min-width: 250px;
+    border-radius: 50%;
+    border: 0.25rem double #48d1cc;
+    box-shadow: 6px 6px 5px rgb(170, 169, 165);
+    position: relative;
+    z-index: 2;
+  }
+
+  .section_subtitle-intro {
+    align-self: start;
+    grid-column: -1/1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    right: -1.5rem;
+    width: calc(100% - 1.5rem);
+  }
 }
