@@ -143,6 +143,8 @@ nav {
 /* Introduction section */
 .intro {
   position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 @media (min-width: 600px) {
@@ -182,7 +184,7 @@ nav {
 /* My services section */
 
 .my-services {
-  /* background-color: var(--dark_color); */
+  background-color: var(--dark_color);
   background-image: url("../images/main.jpg");
   color: var(--light_color);
 
@@ -230,5 +232,43 @@ nav {
   .service {
     margin: 0 2.5rem;
     padding: 2.5rem 1.5rem;
+  }
+}
+
+.about-me {
+  max-width: 1000px;
+  margin: 5rem auto;
+}
+
+.about-me_img {
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em rgba(0, 0, 0, 0.15);
+  height: 450px;
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-template-areas: "title img" "subtitle img" "text img";
+    grid-column-gap: 1em;
+  }
+
+  .section_title-about {
+    grid-area: title;
+  }
+
+  .section_subtitle-about {
+    grid-column: 1/-1;
+    grid-row: 2;
+    position: relative;
+    /* left: -2em; */
+    width: calc(100% + 2em);
+    padding-right: calc(400px + 2em);
+    z-index: -1;
+  }
+
+  .about-me_img {
+    grid-area: img;
   }
 }
