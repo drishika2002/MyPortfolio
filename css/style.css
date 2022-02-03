@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap");
 
 *,
 *::after,
@@ -15,10 +16,10 @@
   --font_size-h3: 1.25rem;
   --font_size-body: 1rem;
 
-  --first-font: "Source Sans Pro", sans-serif;
+  --first-font: "Signika Negative", sans-serif;
   --second-font: "Source Code Pro", monospace;
   --font-wt1: 300;
-  --font-wt2: 900;
+  --font-wt2: 700;
 
   --light_color: #eeeeee;
   --dark_color: #393e46;
@@ -104,10 +105,12 @@ h3 {
   background: var(--main_color);
   margin-bottom: 2.5em;
   padding: 0.5rem 0.95rem;
+  color: var(--light_color);
+  font-weight: var(--font-wt2);
 }
 
 :focus {
-  outline: 5px solid var(--main_color);
+  outline: 3px solid var(--main_color);
   outline-offset: 3px;
 }
 
@@ -235,6 +238,8 @@ nav {
   }
 }
 
+/* About Me Section */
+
 .about-me {
   max-width: 1000px;
   margin: 5rem auto;
@@ -271,4 +276,73 @@ nav {
   .about-me_img {
     grid-area: img;
   }
+}
+
+/* My Project Section */
+
+.my-work {
+  text-align: center;
+  background-color: var(--dark_color);
+  color: var(--light_color);
+}
+
+.section_subtitle-work {
+  color: var(--main_color);
+  font-weight: var(--font-wt1);
+  margin-bottom: 1em;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+}
+
+.portfolio_item {
+  background: var(--main_color);
+  overflow: hidden;
+}
+
+.portfolio_img {
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.portfolio_img:hover {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+/* Contact and Footer Section */
+.contact {
+  text-align: center;
+}
+
+.contact a.btn {
+  margin: 0;
+}
+.footer {
+  text-align: center;
+  color: var(--light_color);
+  background-color: var(--darker_color);
+  padding: 4rem 2rem;
+}
+
+.icon {
+  margin: auto 1rem;
+  font-size: 2rem;
+}
+
+.icon:hover {
+  opacity: 0.5;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--light_color);
+}
+
+.footer-text {
+  padding-top: 0.5rem;
+  margin: 0;
 }
