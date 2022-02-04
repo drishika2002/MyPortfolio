@@ -139,8 +139,87 @@ h3 {
 
 /* Header Section */
 
-nav {
-  display: none;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: var(--font_size-h3);
+}
+
+.nav {
+  position: fixed;
+  background: var(--dark_color);
+  color: var(--light_color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav_list {
+  list-style: none;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_link {
+  color: inherit;
+  text-decoration: none;
+  font-size: var(--font_size-h3);
+  font-weight: var(--font-wt2);
+}
+
+.nav_link:hover {
+  color: var(--main_color);
+}
+
+.nav-toggle {
+  padding: 1em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background-color: var(--darker_color);
+  width: 2em;
+  height: 4px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 8px;
+}
+.hamburger::after {
+  bottom: 8px;
 }
 
 /* Introduction section */
