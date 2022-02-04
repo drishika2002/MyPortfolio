@@ -40,6 +40,11 @@
 }
 
 /* Styling starts here :) */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--light_color);
   color: var(--dark_color);
@@ -146,12 +151,12 @@ header {
 }
 
 .logo {
-  font-size: var(--font_size-h3);
+  font-size: 1.55rem;
 }
 
 .nav {
   position: fixed;
-  background: var(--dark_color);
+  background: var(--darker_color);
   color: var(--light_color);
   top: 0;
   left: 0;
@@ -188,8 +193,33 @@ header {
   padding: 1em;
   background: transparent;
   border: 0;
+  position: absolute;
+  top: 1em;
+  right: 1em;
   cursor: pointer;
   z-index: 1000;
+}
+
+.nav-open .nav {
+  transform: translateX(0);
+  opacity: 0.95;
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+  background: var(--light_color);
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-8px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
 }
 
 .hamburger {
